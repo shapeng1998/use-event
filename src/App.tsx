@@ -1,14 +1,9 @@
-import { useState } from 'react'
+import { Chat } from './components/Chat'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <main className="flex flex-col items-center">
-      <p>{count}</p>
-      <button className="btn" onClick={() => setCount(c => c + 1)}>
-        add
-      </button>
+    <main className="flex justify-center">
+      <Chat />
     </main>
   )
 }

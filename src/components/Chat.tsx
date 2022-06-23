@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useEvent } from '../hooks/useEvent'
 import { SendButton } from './SendButton'
 
@@ -18,7 +18,12 @@ export const Chat = () => {
         value={text}
         onChange={e => setText(e.target.value)}
       />
-      <SendButton onClick={onClick} />
+      {useMemo(
+        () => (
+          <SendButton onClick={onClick} />
+        ),
+        [onClick]
+      )}
     </div>
   )
 }

@@ -1,10 +1,8 @@
-import { memo } from 'react'
-
 interface SendButtonProps {
   onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export const SendButton = memo(({ onClick }: SendButtonProps) => {
+export const SendButton = ({ onClick }: SendButtonProps) => {
   console.log('render SendButton')
 
   return (
@@ -12,6 +10,4 @@ export const SendButton = memo(({ onClick }: SendButtonProps) => {
       send
     </button>
   )
-})
-
-SendButton.displayName = 'SendButton'
+}
